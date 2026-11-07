@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080808">
+
+    <title>LOVEFLIX | Happy Birthday Naela 🤍</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- AUDIO -->
+<audio id="bgMusic" loop>
+    <source src="if-bread.mp3" type="audio/mpeg">
+</audio>
+
+<!-- LOADING SCREEN -->
+<div id="loadingScreen">
+    <div class="netflix-logo">LOVEFLIX</div>
+    <p>Preparing Naela's Birthday Surprise...</p>
+</div>
+
+<!-- PIN SCREEN -->
+<div id="pinScreen" class="hidden">
+    <div class="pin-box">
+        <h2>A Special Day for You 🎂</h2>
+        <p>Enter Your Birthday Code</p>
+
+        <input
+            type="password"
+            id="pinInput"
+            maxlength="4"
+            placeholder="••••"
+            inputmode="numeric"
+        >
+
+        <button onclick="checkPin()">Let's Celebrate 🤍</button>
+        <span id="pinError"></span>
+    </div>
+</div>
+
+<!-- PROFILE SELECTION -->
+<div id="profileScreen" class="hidden">
+    <h1>Who's Celebrating Today? 🎀</h1>
+
+    <div class="profiles">
+        <div class="profile-card" onclick="enterLoveflix()">
+            <img src="foto1.jpg" alt="Naela">
+            <p>Naela 🤍</p>
+        </div>
+    </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="mainApp" class="hidden">
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">LOVEFLIX</div>
+
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#continue">Memories</a></li>
+            <li><a href="#letter">Birthday Note</a></li>
+            <li><a href="#quiz">Quiz</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section
+        id="hero"
+        class="hero"
+        style="background-image:url('foto1.jpg');"
+    >
+        <div class="overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="badge">HAPPY BIRTHDAY 🎂🤍</span>
+
+            <h1>
+                HAPPY BIRTHDAY,
+                NAELA! 🎀
+            </h1>
+
+            <h3>A Special Day • Made by Nafiza & Nia</h3>
+
+            <p>
+                Today is all about you, Naela.
+                A little surprise, a little celebration,
+                and a whole lot of love from us.
+                We hope this makes your day a little brighter. 🤍
+            </p>
+
+            <div class="hero-buttons">
+                <button class="play-btn" onclick="playStory()">
+                    ▶ Start Your Celebration
+                </button>
+
+                <button
+                    class="info-btn"
+                    onclick="scrollToSection('continue')"
+                >
+                    Explore Memories
+                </button>
+            </div>
+
+        </div>
+
+        <!-- HIDDEN HEART #1 -->
+        <div class="hidden-heart" onclick="collectHeart(this)">
+            🤍
+        </div>
+    </section>
+
+    <!-- CONTINUE WATCHING -->
+    <section id="continue" class="section">
+
+        <h2>Little Moments, Beautiful Memories 🤍</h2>
+
+        <div class="movie-row">
+
+            <div class="movie-card">
+                <img src="foto2.jpg" alt="Memory 01">
+                <div class="movie-info">
+                    <h3>A Beautiful Soul</h3>
+                    <p>Memory 01</p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="foto3.jpg" alt="Memory 02">
+                <div class="movie-info">
+                    <h3>Simply Naela</h3>
+                    <p>Memory 02</p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="foto4.jpg" alt="Memory 03">
+                <div class="movie-info">
+                    <h3>Moments to Remember</h3>
+                    <p>Memory 03</p>
+                </div>
+            </div>
+
+            <div class="movie-card">
+                <img src="foto5.jpg" alt="Memory 04">
+                <div class="movie-info">
+                    <h3>One of a Kind</h3>
+                    <p>Memory 04</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PHOTO GALLERY -->
+    <section class="section">
+
+        <h2>Naela's Special Collection 🎀</h2>
+
+        <div class="grid-gallery">
+
+            <div class="poster"><img src="foto1.jpg" alt="Memory 01"></div>
+            <div class="poster"><img src="foto2.jpg" alt="Memory 02"></div>
+            <div class="poster"><img src="foto3.jpg" alt="Memory 03"></div>
+            <div class="poster"><img src="foto4.jpg" alt="Memory 04"></div>
+            <div class="poster"><img src="foto5.jpg" alt="Memory 05"></div>
+            <div class="poster"><img src="foto6.jpg" alt="Memory 06"></div>
+            <div class="poster"><img src="foto7.jpg" alt="Memory 07"></div>
+            <div class="poster"><img src="foto8.jpg" alt="Memory 08"></div>
+            <div class="poster"><img src="foto9.jpg" alt="Memory 09"></div>
+            <div class="poster"><img src="foto10.jpg" alt="Memory 10"></div>
+            <div class="poster"><img src="foto11.jpg" alt="Memory 11"></div>
+            <div class="poster"><img src="foto12.jpg" alt="Memory 12"></div>
+            <div class="poster"><img src="foto13.jpg" alt="Memory 13"></div>
+            <div class="poster"><img src="foto14.jpg" alt="Memory 14"></div>
+            <div class="poster"><img src="foto15.jpg" alt="Memory 15"></div>
+            <div class="poster"><img src="foto16.jpg" alt="Memory 16"></div>
+
+        </div>
+    </section>
+
+    <!-- BIRTHDAY LETTER -->
+    <section id="letter" class="section">
+
+        <h2>A Birthday Letter for You 💌</h2>
+
+        <div class="letter-box">
+
+            <h3>Happy Birthday, Naela. 🤍</h3>
+
+            <p>
+                Happy birthday, Naela.
+
+                <br><br>
+
+                From Nafiza and Nia.
+
+                <br><br>
+
+                Another year of you being you, and honestly,
+                we're still grateful for it.
+
+                <br><br>
+
+                Thank you for being the kind of person who makes
+                everything feel lighter just by being around.
+
+                <br><br>
+
+                We hope this year brings you clarity, good health,
+                and quiet wins that no one sees but you feel.
+
+                <br><br>
+
+                May everything you’ve been working for in silence
+                finally find its way to you.
+
+                <br><br>
+
+                We’re always here, cheering for you from wherever
+                we are.
+
+                <br><br>
+
+                Have a beautiful year ahead.
+
+                <br><br>
+
+                Wishing you a year that’s soft, steady, and full
+                of good things.
+
+                <br><br>
+
+                You deserve all of it.
+
+                <br><br>
+
+                With love,
+
+                <br>
+
+                Nafiza & Nia 🤍
+            </p>
+
+        </div>
+
+        <!-- HIDDEN HEART #2 -->
+        <div
+            class="hidden-heart letter-heart"
+            onclick="collectHeart(this)"
+        >
+            🤍
+        </div>
+
+    </section>
+
+    <!-- ACHIEVEMENT SYSTEM -->
+    <section class="section">
+
+        <h2>Your Birthday Achievements 🏆</h2>
+
+        <div class="achievement-box">
+
+            <div class="achievement" id="ach1">
+                ⬜ Birthday Login
+            </div>
+
+            <div class="achievement" id="ach2">
+                ⬜ Read Your Letter
+            </div>
+
+            <div class="achievement" id="ach3">
+                ⬜ Birthday Quiz Master
+            </div>
+
+            <div class="achievement" id="ach4">
+                ⬜ Memory Collector
+            </div>
+
+            <div class="achievement" id="ach5">
+                ⬜ Hidden Heart Finder
+            </div>
+
+            <div class="achievement" id="ach6">
+                ⬜ Secret Birthday Surprise
+            </div>
+
+        </div>
+    </section>
+
+    <!-- MEMORY MATCH GAME -->
+    <section id="memoryGame" class="section">
+
+        <h2>Let's Play a Little Game! 🎮</h2>
+
+        <p class="game-desc">
+            Match all the little hearts to unlock something
+            special. Good luck, Naela! 🤍
+        </p>
+
+        <div class="memory-grid">
+
+            <div class="memory-card" data-card="1">
+                <div class="front">?</div>
+                <div class="back">🤍</div>
+            </div>
+
+            <div class="memory-card" data-card="1">
+                <div class="front">?</div>
+                <div class="back">🤍</div>
+            </div>
+
+            <div class="memory-card" data-card="2">
+                <div class="front">?</div>
+                <div class="back">🎂</div>
+            </div>
+
+            <div class="memory-card" data-card="2">
+                <div class="front">?</div>
+                <div class="back">🎂</div>
+            </div>
+
+            <div class="memory-card" data-card="3">
+                <div class="front">?</div>
+                <div class="back">🎀</div>
+            </div>
+
+            <div class="memory-card" data-card="3">
+                <div class="front">?</div>
+                <div class="back">🎀</div>
+            </div>
+
+        </div>
+
+        <div id="memoryResult"></div>
+
+        <!-- HIDDEN HEART #3 -->
+        <div
+            class="hidden-heart game-heart"
+            onclick="collectHeart(this)"
+        >
+            🤍
+        </div>
+
+    </section>
+
+    <!-- SECRET EPISODE -->
+    <section class="section" id="secretEpisode">
+
+        <h2>A Secret Birthday Surprise 🔐</h2>
+
+        <div class="secret-lock">
+
+            <p>
+                There's one more little surprise waiting for you.
+                Find all the hidden hearts first, Naela! 🎀🤍
+            </p>
+
+            <button id="unlockBtn" disabled>
+                Locked 🔒
+            </button>
+
+        </div>
+
+        <div id="secretContent" class="hidden">
+
+            <img
+                src="foto16.jpg"
+                class="secret-photo"
+                alt="Birthday Surprise"
+            >
+
+            <h3>One More Thing, Naela 🤍</h3>
+
+            <p>
+                Another year, another chapter of your life.
+
+                <br><br>
+
+                We hope you never forget how special you are
+                and how much happiness you bring to the people
+                around you.
+
+                <br><br>
+
+                There will be days when everything feels easy,
+                and there will be days when things don't go
+                exactly as planned.
+
+                <br><br>
+
+                But through all of it, we hope you keep believing
+                in yourself and everything you're capable of.
+
+                <br><br>
+
+                Don't rush yourself. Take your time, enjoy
+                the little things, and celebrate even the
+                smallest achievements.
+
+                <br><br>
+
+                You deserve happiness that feels genuine,
+                friendships that feel like home, and dreams
+                that slowly turn into reality.
+
+                <br><br>
+
+                Once again, happy birthday, Naela.
+
+                <br><br>
+
+                We're lucky to have you.
+
+                <br><br>
+
+                With lots of love,
+
+                <br>
+
+                Nafiza & Nia 🎀🤍
+            </p>
+
+        </div>
+    </section>
+
+    <!-- QUIZ SECTION -->
+    <section id="quiz" class="section">
+
+        <h2>How Well Do You Know Your Birthday? 🎂</h2>
+
+        <div class="quiz-box">
+
+            <h3>Whose birthday are we celebrating today?</h3>
+
+            <button onclick="correctAnswer()">
+                Naela! 🎀
+            </button>
+
+            <button onclick="wrongAnswer()">
+                Nafiza 😭
+            </button>
+
+            <button onclick="wrongAnswer()">
+                Nia WKWKWK
+            </button>
+
+            <div id="quizResult"></div>
+
+        </div>
+    </section>
+
+    <!-- SEASON COMPLETION -->
+    <section id="seasonComplete" class="section">
+
+        <h2>Your Birthday Progress 🤍</h2>
+
+        <div class="season-box">
+
+            <div class="progress-bar">
+                <div
+                    id="seasonProgress"
+                    class="progress-fill"
+                ></div>
+            </div>
+
+            <p id="progressText">
+                0 / 6 Achievements Completed
+            </p>
+
+            <div id="seasonBadge">
+                🎀 Your Birthday Journey Begins...
+            </div>
+
+        </div>
+
+        <!-- HIDDEN HEART #4 -->
+        <div
+            class="hidden-heart season-heart"
+            onclick="collectHeart(this)"
+        >
+            🤍
+        </div>
+
+    </section>
+
+    <!-- ENDING CREDITS -->
+    <section id="credits" class="credits-section">
+
+        <div class="credits-wrapper">
+
+            <h1>LOVEFLIX</h1>
+
+            <p>A Special Birthday Edition</p>
+
+            <br>
+
+            <p>Made with Love by</p>
+            <h2>Nafiza & Nia 🤍</h2>
+
+            <br>
+
+            <p>Made Especially For</p>
+            <h2>Naela 🎀</h2>
+
+            <br>
+
+            <p>Occasion</p>
+            <h2>Happy Birthday!</h2>
+
+            <br>
+
+            <p>Genre</p>
+            <h2>Friendship • Happiness • Love</h2>
+
+            <br><br>
+
+            <h1>Thank You For Being You</h1>
+
+            <h2>Wishing You All the Best 🤍</h2>
+
+        </div>
+
+        <!-- HIDDEN HEART #5 -->
+        <div
+            class="hidden-heart credits-heart"
+            onclick="collectHeart(this)"
+        >
+            🤍
+        </div>
+
+    </section>
+
+    <!-- FINAL SCREEN -->
+    <section class="final-screen">
+
+        <div class="final-card">
+
+            <h1>🎬 That's a Wrap, Naela!</h1>
+
+            <p>
+                And that's the end of your little birthday
+                surprise!
+
+                <br><br>
+
+                We hope you enjoyed every little part of it
+                and found something that made you smile.
+
+                <br><br>
+
+                Remember, this is just a small reminder
+                of how wonderful you are.
+
+                <br><br>
+
+                May your next chapter be filled with beautiful
+                moments, unexpected happiness, and countless
+                reasons to smile.
+
+                <br><br>
+
+                So, did you enjoy your little birthday gift?
+            </p>
+
+            <button
+                onclick="renewSeason()"
+                class="renew-btn"
+            >
+                YES 🤍
+            </button>
+
+            <div id="renewMessage"></div>
+
+        </div>
+
+    </section>
+
+</div>
+<!-- END MAIN APP -->
+
+<!-- CONFETTI -->
+<div id="confettiContainer"></div>
+
+<!-- FLOATING HEARTS -->
+<div class="floating-hearts">
+    <span>🤍</span>
+    <span>🎀</span>
+    <span>🤍</span>
+    <span>🎂</span>
+    <span>✨</span>
+</div>
+
+<!-- POPUP ACHIEVEMENT -->
+<div id="achievementPopup" class="achievement-popup">
+    🏆 Achievement Unlocked!
+</div>
+
+<!-- SUCCESS SCREEN -->
+<div id="seasonUnlocked" class="season-unlocked hidden">
+
+    <div class="unlock-box">
+
+        <h1>🤍 YOU FOUND EVERYTHING!</h1>
+
+        <p>
+            You explored every little surprise hidden
+            inside this website.
+
+            <br><br>
+
+            Congratulations, Naela! 🎀
+
+            <br><br>
+
+            Your birthday adventure is finally complete.
+
+            <br><br>
+
+            We hope this little gift brought a smile
+            to your face and made your special day
+            even more memorable.
+
+            <br><br>
+
+            You deserve all the beautiful things
+            life has to offer.
+        </p>
+
+        <h3>Made with Love, Nafiza & Nia 🤍</h3>
+
+        <button onclick="closeSeasonUnlocked()">
+            Continue
+        </button>
+
+    </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <p>Made with 🤍 by Nafiza & Nia</p>
+</footer>
+
+<!-- SCRIPT -->
+<script src="script.js"></script>
+
+</body>
+  </html>
